@@ -14,50 +14,58 @@
 
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Online shopping - ${title}</title>
-
-<script>
-	window.menu = '${title}';
-
-</script>
-
-<!-- Bootstrap core CSS -->
-<link href="${css}/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link href="${css}/myapp.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<title>Online shopping - ${title}</title>
+	
+	<script>
+		window.menu = '${title}';
+	
+	</script>
+	
+	<!-- Bootstrap core CSS -->
+	<link href="${css}/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+	<div class="wrapper">
+
 	<!-- Navigation -->
 	<%@include file="./shared/navbar.jsp"%>
 
 	<!-- Page Content -->
-	<!-- Loading the home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
-
-	<!-- Loading only when user click about -->
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
-
-	<!-- Loading only when user click contact -->
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
-
+	
+	<div class="content">
+	
+		<!-- Loading the home content -->
+		<c:if test="${userClickHome == true}">
+			<%@include file="home.jsp"%>
+		</c:if>
+	
+		<!-- Loading only when user click about -->
+		<c:if test="${userClickAbout == true}">
+			<%@include file="about.jsp"%>
+		</c:if>
+	
+		<!-- Loading only when user click contact -->
+		<c:if test="${userClickContact == true}">
+			<%@include file="contact.jsp"%>
+		</c:if>
+		
+	</div>
+	</div>
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
+	
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="${js}/jquery.js"></script>
@@ -65,7 +73,6 @@
 	
 	<!-- Self coded JavaScript -->
 	<script src="${js}/myapp.js"></script>
-
 </body>
 
 </html>

@@ -14,6 +14,14 @@
 	</properties>
 	<dependencies>
 
+		<!-- Linking backend project -->
+		<dependency>
+			<groupId>md.kniga</groupId>
+			<artifactId>backendOnlineShop</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
 		<!-- JAVAEE BEAN -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -35,7 +43,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
